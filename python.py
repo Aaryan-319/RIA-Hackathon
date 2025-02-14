@@ -4,7 +4,7 @@ import os
 import time
 import openpyxl
 
-dirCheck = os.listdir("/DBMS")
+dirCheck = os.listdir("./")
 localtime = str(time.asctime(time.localtime(time.time())))
 
 #checking for database folder:
@@ -12,7 +12,7 @@ def folderCheck():
     if "DBMS" in dirCheck:
         print("STATUS: DATABASE FOLDER FOUND")
     else:
-        os.mkdir("/DBMS")
+        os.mkdir("./DBMS")
         print("STATUS: DATABASE FOLDER CREATED")
 
 #creating new dataset files:
@@ -24,12 +24,12 @@ def create(filename):
 
         elif filename not in dirCheck:
             wb = openpyxl.Workbook()
-            wb.save(f'/DBMS/{filename}.xlsx')
-            wb = openpyxl.load_workbook(f'/DBMS/{filename}.xlsx')
+            wb.save(f'./DBMS/{filename}.xlsx')
+            wb = openpyxl.load_workbook(f'./DBMS/{filename}.xlsx')
             wb.properties.title = filename
             wb.properties.category = filename
             wb.properties.keywords = filename
-            wb.save(f'/DBMS/{filename}.xlsx')
+            wb.save(f'./DBMS/{filename}.xlsx')
             wb.close()
 
     except Exception as e:
