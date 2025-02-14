@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+    <link rel="icon" href="/ano/RIA-Hackathon/Frontend/Picture/emb.png" type="image/x-icon">
+</head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Keeps the navbar at the top and the content below */
+    justify-content: flex-start; /* Aligns navbar to the top */
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centers the navbar horizontally */
+    align-items: center;
+    background: linear-gradient(to right, #d71a28, #003f88); /* Red to Blue */
+    padding: 15px 30px;
+    position: fixed; /* Fix navbar at the top */
+    width: 100%; /* Full width of the page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.nono {
+    width: 60px;
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+.voting-container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 80px; /* Ensures content doesn't get overlapped by navbar */
+}
+
+h1 {
+    color: #d71a28;
+    margin-bottom: 30px;
+}
+
+.participants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.participant {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.participant img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.participant h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.participant p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.vote-btn {
+    padding: 10px 20px;
+    background-color: #d71a28;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vote-btn:hover {
+    background-color: #003f88;
+}
+
+.participant:hover {
+    transform: translateY(-10px);
+}
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <img class="nono" src="/ano/RIA-Hackathon/Frontend/Picture/emb.png" alt="e-nagarik Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/ano/RIA-Hackathon/Frontend/Website_codes/home.html">Home</a></li>
+            <li><a href="/ano/RIA-Hackathon/Frontend/Website_codes/services.html">Services</a></li>
+            <li><a href="/ano/RIA-Hackathon/Frontend/Website_codes/help.html">Help</a></li>
+            <li><a href="/ano/RIA-Hackathon/Frontend/Website_codes/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="voting-container">
+        <h1>Vote for Your Favorite Candidate</h1>
+
+        <div class="participants">
+            <!-- Ram Karki - Yetako Party -->
+            <div class="participant">
+                <img src="/ano/RIA-Hackathon/Frontend/Picture/man1.jpg" alt="Ram Karki">
+                <h3>Ram Karki</h3>
+                <p>Yetako Party</p>
+                <a href="/ano/RIA-Hackathon/Frontend/Website_codes/home.html"><button class="vote-btn">Confirm Your Vote</button></a>
+            </div>
+
+            <!-- Shyam Maharjan - Utako Party -->
+            <div class="participant">
+                <img src="/ano/RIA-Hackathon/Frontend/Picture/man2.jpg" alt="Shyam Maharjan">
+                <h3>Shyam Maharjan</h3>
+                <p>Utako Party</p>
+                <a href="/ano/RIA-Hackathon/Frontend/Website_codes/home.html"><button class="vote-btn">Confirm Your Vote</button></a>
+            </div>
+
+            <!-- Hari Gautam - Yesto Party -->
+            <div class="participant">
+                <img src="/ano/RIA-Hackathon/Frontend/Picture/man3.jpg" alt="Hari Gautam">
+                <h3>Hari Gautam</h3>
+                <p>Yesto Party</p>
+                <a href="/ano/RIA-Hackathon/Frontend/Website_codes/home.html"><button class="vote-btn">Confirm Your Vote</button></a>
+            </div>
+
+            <!-- Sari Maya Limbu - Usto Party -->
+            <div class="participant">
+                <img src="/ano/RIA-Hackathon/Frontend/Picture/women1.jpg" alt="Sari Maya Limbu">
+                <h3>Sari Maya Limbu</h3>
+                <p>Usto Party</p>
+                <a href="/ano/RIA-Hackathon/Frontend/Website_codes/home.html"><button class="vote-btn">Confirm Your Vote</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+        // Confirm Vote Functionality (when confirm button is clicked)
+        document.querySelectorAll(".vote-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const candidateName = this.closest('.participant').querySelector('h3').innerText;
+                
+                // Show confirmation message
+                alert(`You have voted for ${candidateName}! Your vote has been recorded.`);
+                
+                // Disable the vote button and change its text
+                this.disabled = true;
+                this.innerText = "Vote Casted";
+                this.style.backgroundColor = "#ccc"; // Change button color to grey to show it's disabled
+                
+                // Block all participants (if you want to prevent voting for others as well)
+                document.querySelectorAll('.participant').forEach(participant => {
+                    participant.querySelector('.vote-btn').disabled = true;
+                    participant.querySelector('.vote-btn').innerText = "Vote Casted";
+                    participant.querySelector('.vote-btn').style.backgroundColor = "#ccc";
+                });
+            });
+        });
+    });
+        document.addEventListener("DOMContentLoaded", function () {
+    // Confirm Vote Functionality (when confirm button is clicked)
+    document.querySelectorAll(".vote-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const candidateName = this.closest('.participant').querySelector('h3').innerText;
+            alert(`You have voted for ${candidateName}! Your vote has been recorded.`);
+        });
+    });
+});
+    </script>
+</body>
+</html>

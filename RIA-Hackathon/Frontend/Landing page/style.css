@@ -1,0 +1,288 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1), rgba(0, 0, 255, 0.1), white);
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #d71a28, #003f88); 
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #5450a3, #7c7079);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #d0adbd;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #e65c53;
+}
+
+/* Support Section */
+.support {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #0075b2;
+    color: white;
+}
+
+.support-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.support-container {
+    display: flex;
+    gap: 20px;
+}
+
+.support-box {
+    background-color: #005c8c;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+}
+
+.support-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Information Section */
+.info {
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.info-txt {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 20px;
+    }
+    .info-txt {
+        font-size: 18px;
+    }
+    .support {
+        flex-direction: column;
+        text-align: center;
+    }
+    .support-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+/* Slide-in Animation */
+.slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+}
+/* Contact Page Styling */
+.contact {
+    padding: 40px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact .form-group {
+    margin-bottom: 15px;
+}
+
+.contact label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #005c8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #003f88;
+}
+
+/* Help Page Styling */
+.help {
+    padding: 40px;
+    background-color: #e9f2f7;
+    text-align: center;
+}
+
+.help h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.faq-answer {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Services Page Styling */
+.services {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.service-card {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 18px;
+}
+.abc{
+    margin-left: 30px;
+    border-radius: 9px;
+}
+
+.fgh{
+    border-radius: 9px;
+}
