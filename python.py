@@ -7,6 +7,14 @@ import openpyxl
 dirCheck = os.listdir("/DBMS")
 localtime = str(time.asctime(time.localtime(time.time())))
 
+#checking for database folder:
+def folderCheck():
+    if "DBMS" in dirCheck:
+        print("STATUS: DATABASE FOLDER FOUND")
+    else:
+        os.mkdir("/DBMS")
+        print("STATUS: DATABASE FOLDER CREATED")
+
 #creating new dataset files:
 def create(filename):
     try:
@@ -40,6 +48,8 @@ def search(dataset):
 
 if __name__ == '__main__':
     while True:
+        print("DATABASE MANAGEMENT SYSTEM")
+        folderCheck()
         query = input(str("> "))
         query = query.split(" ")
         if "create" == query[0] or "-c" == query[0]:
